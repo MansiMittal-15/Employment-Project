@@ -3,7 +3,7 @@ import Home from './Home Page Data/Home'
 import Explore from "./Explore page data/Explore";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
-import UserProfile from "./Home Page Data/userProfile";
+import UserProfile from "./Home Page Data/UserProfile";
 
 const appRouter = createBrowserRouter([
   {
