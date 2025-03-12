@@ -1,17 +1,38 @@
-import React from 'react'
-import Header from './components/Header' 
-import Profile from './components/Profile'
-import Market from './components/Market'
-import HomeFront from './components/HomeFront'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from './Home Page Data/Home' 
+import Explore from "./Explore page data/Explore";
+import Login from "./auth/Login";
+import Signup from "./auth/Signup";
+import UserProfile from "./Home Page Data/userProfile";
+
+const appRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/explore',
+    element: <Explore />
+  }, 
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/signup',
+    element: <Signup />,
+  },
+  {
+    path: '/viewProfile',
+    element: <UserProfile />,
+  },
+]);
 
 const App = () => {
   return (
-    <div className='box-border'>
-      <Header /> 
-      {/* <Market /> */}
-      {/* <Profile /> */}
-      <HomeFront />
-    </div>
+    <>
+      <RouterProvider router={appRouter} />
+    </>
   )
 }
 
